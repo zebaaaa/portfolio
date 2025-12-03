@@ -1,3 +1,5 @@
+
+
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -41,30 +43,38 @@ function Skills() {
   return (
     <div
       id="Skills"
-      className="py-28 px-48 bg-[#fffbd4] bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"
+      className="
+        py-20 
+        px-6 sm:px-10 md:px-20 
+        bg-[#fffbd4] 
+        bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] 
+        [background-size:16px_16px]
+      "
     >
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl font-bold mb-10 text-center">My Skills</h2>
+      <div className="container mx-auto max-w-6xl">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-center">
+          My Skills
+        </h2>
 
         {/* CATEGORY BUTTONS */}
-        <div className="flex justify-center gap-4 mb-8">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-full text-sm font-semibold transition 
-                ${
-                  selectedCategory === cat
-                    ? "bg-black text-white"
-                    : "bg-gray-200 hover:bg-gray-300"
-                }`}
+              className={`px-4 py-2 rounded-full text-sm sm:text-base font-semibold transition
+              ${
+                selectedCategory === cat
+                  ? "bg-black text-white"
+                  : "bg-gray-200 hover:bg-gray-300"
+              }`}
             >
               {cat}
             </button>
           ))}
         </div>
 
-        {/* SUPER SMOOTH ANIMATED SKILLS GRID */}
+        {/* SMOOTH ANIMATED GRID */}
         <AnimatePresence mode="wait">
           <motion.div
             key={selectedCategory}
@@ -72,7 +82,7 @@ function Skills() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35 }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
           >
             {filteredSkills.map((skill, key) => (
               <motion.div
@@ -91,9 +101,17 @@ function Skills() {
                   },
                 }}
                 exit={{ opacity: 0, scale: 0.9, y: -10 }}
-                className="bg-white/50 py-2 rounded-full shadow-md flex justify-center items-center"
+                className="
+                  bg-white/60 
+                  py-3 
+                  rounded-full 
+                  shadow-md 
+                  flex justify-center items-center
+                "
               >
-                <h3 className="font-semibold text-md">{skill.name}</h3>
+                <h3 className="font-semibold text-sm sm:text-md">
+                  {skill.name}
+                </h3>
               </motion.div>
             ))}
           </motion.div>
@@ -104,4 +122,3 @@ function Skills() {
 }
 
 export default Skills;
-
