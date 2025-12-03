@@ -12,7 +12,7 @@ function Skills() {
     { name: "CSS", categories: "Frontend" },
     { name: "JS", categories: "Frontend" },
     { name: "Bootstrap", categories: "Frontend" },
-    { name: "tailwind-Css", categories: "Frontend" },
+    { name: "Tailwind-Css", categories: "Frontend" },
     { name: "React", categories: "Frontend" },
     { name: "Framer Motion", categories: "Frontend" },
     { name: "chart.js", categories: "Frontend" },
