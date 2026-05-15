@@ -21,13 +21,13 @@ function Contact() {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-            <a
+            {/* <a
               href="mailto:zebazikre@gmail.com"
               className="flex items-center justify-center gap-2 bg-white px-6 py-3 rounded-full shadow-md hover:shadow-lg transition w-full sm:w-auto"
             >
               <MdEmail className="w-5 h-5" />
               <span>Email</span>
-            </a>
+            </a> */}
 
             <a
               href="https://www.linkedin.com/in/zeba-z-91a7b025b"

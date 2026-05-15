@@ -4,25 +4,41 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 function Skills() {
-  const categories = ["Frontend", "Backend", "Tools", "All"];
-  const [selectedCategory, setSelectedCategory] = useState("Frontend");
+  const categories = ["Devops", "Web Development", "All"];
+  const [selectedCategory, setSelectedCategory] = useState("Devops");
 
   const skills = [
-    { name: "HTML", categories: "Frontend" },
-    { name: "CSS", categories: "Frontend" },
-    { name: "JS", categories: "Frontend" },
-    { name: "Bootstrap", categories: "Frontend" },
-    { name: "Tailwind-Css", categories: "Frontend" },
-    { name: "React", categories: "Frontend" },
-    { name: "Framer Motion", categories: "Frontend" },
-    { name: "chart.js", categories: "Frontend" },
+    { name: "Git", categories: "Devops" },
+    { name: "Linux", categories: "Devops" },
+    { name: "CI/CD", categories: "Devops" },
+    { name: "Jenkins", categories: "Devops" },
+    { name: "Github Actions", categories: "Devops" },
+    { name: "AWS CodePipeline", categories: "Devops" },
+    { name: "Docker", categories: "Devops" },
+    { name: "kubernetes", categories: "Devops" },
+    { name: "Terraform", categories: "Devops" },
+    { name: "CloudFormation", categories: "Devops" },
+    { name: "Ansible", categories: "Devops" },
+    { name: "prometheus", categories: "Devops" },
+    { name: "AWS CloudWatch", categories: "Devops" },
+    { name: "Grafana", categories: "Devops" },
+    { name: "ELK Stack", categories: "Devops" },
+    { name: "AWS", categories: "Devops" },
 
-    { name: "Node", categories: "Backend" },
-    { name: "Express", categories: "Backend" },
-    { name: "MongoDB", categories: "Backend" },
-    { name: "SQL", categories: "Backend" },
-    { name: "Firebase", categories: "Backend" },
-    { name: "postman", categories: "Backend" },
+
+    { name: "HTML", categories: "Web Development" },
+    { name: "CSS", categories: "Web Development" },
+    { name: "JS", categories: "Web Development" },
+    { name: "Bootstrap", categories: "Web Development" },
+    { name: "Tailwind CSS", categories: "Web Development" },
+    { name: "React", categories: "Web Development" },
+    { name: "Framer Motion", categories: "Web Development" },
+    { name: "Node", categories: "Web Development" },
+    { name: "Express", categories: "Web Development" },
+    { name: "MongoDB", categories: "Web Development" },
+    { name: "SQL", categories: "Web Development" },
+    { name: "Firebase", categories: "Web Development" },
+    { name: "postman", categories: "Web Development" },
 
     { name: "Git/Github", categories: "Tools" },
     { name: "Docker", categories: "Tools" },
